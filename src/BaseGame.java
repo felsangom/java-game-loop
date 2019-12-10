@@ -1,4 +1,6 @@
-public class GameLoop implements Runnable {
+import java.awt.Canvas;
+
+public class BaseGame extends Canvas implements Runnable {
 
 	private Thread thread;
 	private boolean isRunning = false;
@@ -29,6 +31,8 @@ public class GameLoop implements Runnable {
 	
 	@Override
 	public void run() {
+		requestFocus();
+
 		long lastTime = System.nanoTime();
 		double amountOfTicks = 60.0;
 		double ns = 1000000000 / amountOfTicks;
