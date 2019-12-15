@@ -1,7 +1,9 @@
+package br.com.fsg.basegame;
 import java.awt.Canvas;
 
 public class BaseGame extends Canvas implements Runnable {
 
+	private static final long serialVersionUID = 6079781531204627729L;
 	private Thread thread;
 	private boolean isRunning = false;
 
